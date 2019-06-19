@@ -12,6 +12,9 @@ export default function() {
   
   this.get('/characters');
 
+  this.get('/movies/:id');
+  this.get('/characters/:id');
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*

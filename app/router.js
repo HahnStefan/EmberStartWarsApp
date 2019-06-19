@@ -9,6 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('movies');
   this.route('characters');
+  this.route('movie-details', {path: '/:movie_id/movie-details'});
+  this.route('character-details', {path: '/:character_id/character-details'});
 });
 
 export default Router;
