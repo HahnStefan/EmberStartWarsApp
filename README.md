@@ -3,6 +3,9 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+It follows the tutorial of Udemy
+https://www.udemy.com/starting-with-ember-2/learn/lecture/6055836#overview
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
