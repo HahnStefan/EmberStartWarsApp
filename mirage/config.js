@@ -1,5 +1,17 @@
 export default function() {
 
+  // this.get('/movies'), (schema) => {
+  //   return schema.movies.all();
+  // });	
+  
+  // this.get('/characters'), (schema) => {
+  //   return schema.characters.all();
+  // });
+
+  this.get('/movies');	
+  
+  this.get('/characters');
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
