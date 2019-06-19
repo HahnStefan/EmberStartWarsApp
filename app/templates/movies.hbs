@@ -1,9 +1,8 @@
 <ul>
-    {{#each model as |movie|}}
+  {{#each model as |movie|}}
     <li>
-        {{#movie-list-entry movie=movie}}
-        {{/movie-list-entry}}
+      {{#movie-list-entry movie=movie}}{{/movie-list-entry}}
     </li>
-    {{/each}}
+  {{/each}}
 </ul>
 {{outlet}}

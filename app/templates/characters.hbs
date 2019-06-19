@@ -1,9 +1,8 @@
 <ul>
-    {{#each model as |character|}}
+  {{#each model as |character|}}
     <li>
-        {{#character-list-entry character=character}}
-        {{/character-list-entry}}
+      {{#character-list-entry character=character}}{{/character-list-entry}}
     </li>
-    {{/each}}
+  {{/each}}
 </ul>
 {{outlet}}
