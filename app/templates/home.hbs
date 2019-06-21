@@ -1,0 +1,44 @@
+{{#paper-toolbar tall=true warn=false}}
+  <div class="layout-row layout-align-center-start">
+    <h2>
+      Fun Star Wars Movie Details!
+    </h2>
+  </div>
+  <span class="flex"></span>
+  {{#paper-toolbar-tools}}
+    {{#paper-button raised=true onClick=(action "gotoMovies")}}
+      Movies
+    {{/paper-button}}
+    {{#paper-button raised=true onClick=(action "gotoCharacters")}}
+      Characters
+    {{/paper-button}}
+    {{#paper-button raised=true onClick=(action "gotoVideo")}}
+      Trailer
+    {{/paper-button}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+<div class="layout-column layout-align-center-center">
+  <div class="layout-row layout-align-center-center">
+    <div class="flex"></div>
+    <div class="flex-70">
+      <h5>
+        This is a Star Wars movie database site. You can get info …
+      </h5>
+    </div>
+    <div class="flex"></div>
+  </div>
+  <div class="layout-row layout-align-center-center">
+    <div class="flex-100">
+      <h3>
+        May the force be with You
+      </h3>
+    </div>
+    <div class="flex"></div>
+  </div>
+</div>
+{{paper-devider}}>
+<div class="layout-column layout-align-center-center">
+  <div>
+    {{outlet}}
+  </div>
+</div>

@@ -1,0 +1,10 @@
+{{#each model as |character|}}
+  <div class="layout-row layout-align-center-center">
+    <div class="flex-15"></div>
+    <div class="flex">
+      {{#character-list-entry character=character}}
+      {{/character-list-entry}}
+    </div>
+    <div class="flex-15"></div>
+  </div>
+{{/each}}

@@ -7,11 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('movies');
-  this.route('characters');
-  this.route('movie-details', {path: '/:movie_id/movie-details'});
-  this.route('character-details', {path: '/:character_id/character-details'});
-  this.route('video');
+  this.route('home', function() {
+    this.route('movies');
+    this.route('characters');
+    this.route('video');
+  });
 });
 
 export default Router;

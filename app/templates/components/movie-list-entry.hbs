@@ -1,7 +1,26 @@
-<h3>
-  {{#link-to "movie-details" movie.id}}
-    {{movie.title}}
-  {{/link-to}}
-</h3>
-Director: {{movie.director}} <br>
-Release Date: {{movie.release_date}}
+{{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}
+        {{movie.title}}
+      {{/text.headline}}
+      {{#text.subhead}}
+        Director: {{movie.director}} <br>
+        Release Date: {{movie.release_date}}
+        {{#if showDetails}}
+          <br>
+          Producer: {{movie.producer}}<br>
+          Opening Crawl: {{movie.opening_crawl}}
+        {{/if}}
+      {{/text.subhead}}
+    {{/title.text}}
+    {{#title.media size="md"}}
+      <div class="card-media"></div>
+    {{/title.media}}
+  {{/card.title}}
+  {{#card.actions}}
+    {{#paper-button fab=true onClick=(action "showMovieDetails")}}
+      {{buttonTxt}}
+    {{/paper-button}}
+  {{/card.actions}}
+{{/paper-card}}

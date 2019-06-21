@@ -1,5 +1,26 @@
-<h3>
-  {{#link-to "character-details" character.id}}
-    {{character.name}}
-  {{/link-to}}
-</h3>
+{{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}
+        {{character.name}}
+      {{/text.headline}}
+      {{#text.subhead}}
+        {{#if showDetails}}
+          <br>
+          Height: {{character.height}}<br>
+          Wright: {{character.mass}}<br>
+          Skin Color: {{character.skin_color}}<br>
+          Hair Color: {{character.hair_color}}<br>
+          Eye Color: {{character.eye_color}}<br>
+          Birth Year: {{character.birth_year}}<br>
+          Gender: {{character.gender}}
+        {{/if}}
+      {{/text.subhead}}
+    {{/title.text}}
+  {{/card.title}}
+  {{#card.actions}}
+    {{#paper-button fab=true primary=true onClick=(action "showCharacterDetails")}}
+      {{buttonTxt}}
+    {{/paper-button}}
+  {{/card.actions}}
+{{/paper-card}}
